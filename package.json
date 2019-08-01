@@ -1,0 +1,36 @@
+{
+  "name": "codejam-culture-portal",
+  "private": true,
+  "description": "CodeJam Culture Portal",
+  "version": "1.0.0",
+  "author": "aksr666, alexalizurchik, Spinnen87, Prezidents-friends",
+  "repository": "https://github.com/Spinnen87/CodeJam-Culture-Portal",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "gatsby": "^2.0.40",
+    "gatsby-plugin-i18next": "^1.1.5",
+    "gatsby-plugin-layout": "^1.0.7",
+    "gatsby-plugin-manifest": "^2.0.7",
+    "gatsby-plugin-offline": "^2.0.12",
+    "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-source-contentful": "^2.1.15",
+    "gatsby-source-filesystem": "^2.0.7",
+    "google-maps-react": "^2.0.2",
+    "i18next-browser-languagedetector": "^3.0.1",
+    "react": "^16.6.0",
+    "react-bootstrap": "^1.0.0-beta.10",
+    "react-dom": "^16.6.0",
+    "react-helmet": "^5.2.0",
+    "react-image-gallery": "^0.8.18",
+    "react-youtube": "^7.9.0",
+    "vertical-timeline-component-for-react": "^1.0.6"
+  },
+  "gitHead": "1bf52e4b2a459af17526d03ebaf34cb1a87b5ab4"
+}
