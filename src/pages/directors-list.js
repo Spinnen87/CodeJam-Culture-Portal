@@ -29,7 +29,7 @@ class SearchPage extends Component {
     filteredItems.length ? this.setState({ items: filteredItems }) : this.setState({ items: [] });
   }
 
-  render() {
+  render() { 
     return (
       <I18n>
         {t => (
