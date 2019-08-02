@@ -19,7 +19,7 @@ const IndexPage = () => {
     </I18n>
   );
 }
- 
+
 export default withI18next()(IndexPage);
 
 export const query = graphql`
