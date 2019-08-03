@@ -1,5 +1,6 @@
 {
   "Not Found": "Not found",
+  "Home Page": "Home",
   "Site title": "Belarusian film directors",
   "FirstPageTitle": "The information on this portal is dedicated to the Belarusian Union of cinematographers",
   "Description": "The Belarusian Union of cinematographers was founded on November 15, 1962. To date, the Union brings together more than 300 talented filmmakers. The main objectives of the Union: the creation of an intellectual creative environment conducive to the development of national cinema; protection of intellectual property and social protection of the Union members, extensive cultural work with the audience and a number of other tasks. The Union organizes creative evenings of famous filmmakers of Belarus and other countries, vernissages of film artists and photo exhibitions. BSC conducts scientific and practical conferences, round tables on topical issues of film culture, publishes on the basis of their collections, is the initiator and co-founder of the annual international film festivals: falling leaves and the children's international film festival Listopadik in Minsk, MF animated films animayovka in Mogilev, National KF in Brest, which collect thousands of audiences, as well as the festival of ecological films Ekafilm (held every two years) and a number of other cultural events.",
@@ -14,5 +15,12 @@
   "Movie": "Movie",
   "Date": "Date",
   "Developers": "Developers",
-  "Button": "Go"
+  "Button": "Go",
+  "TimeLine": "Timeline",
+  "Table": "Works",
+  "Map": "Map",
+  "Gallery": "Gallery",
+  "About us": "About us",
+  "About developers": "This portal was developed using the gatsbyjs static site generator. Content management is carried out using the confentful content management API, which allows cross-platform online publishing on multiple devices. For visual design of the portal, the material-ui library was used, which allows you to create applications in the style of Google Material Design using React components. The content and interface of the portal is available in 3 three languages: Russian, Belarusian and English. The portal is also adaptive for viewing on mobile devices.",
+  "Director content": "Content"
 }
