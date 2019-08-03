@@ -1,17 +1,25 @@
 module.exports = {
-  pathPrefix: '/CodeJam-Culture-Portal',
+  pathPrefix: '/gatsby-i18n/gatsby-starter-i18next',
   plugins: [
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'CodeJam-Culture-Portal',
+        name: 'gatsby-starter-lingui',
         short_name: 'starter',
-        start_url: '/',
+        start_url: '/gatsby-i18n/gatsby-starter-i18next/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -26,7 +34,7 @@ module.exports = {
       options: {
         availableLngs: ['en', 'by', 'ru'],
         fallbackLng: 'en',
-        debug: true,
+        debug: false,
       },
     },
     {

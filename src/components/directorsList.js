@@ -1,12 +1,16 @@
 import { Link } from 'gatsby-plugin-i18next';
 import React from 'react';
-import ListItem from './directorListItem';
+import DirectorsListItem from './directorListItem';
 
-const List = ({ items, error }) => {
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+
+const DirectorsList = ({ items, error }) => {
     const renderItems = (data) => {
         return data.map((item, i) =>
             <Link key={i} to={`/${item.node.path}`}>
-                <ListItem
+                <DirectorsListItem
                     title={item.node.title}
                     avatar={item.node.avatar}
                     birthDate={item.node.birthDate}
@@ -15,8 +19,8 @@ const List = ({ items, error }) => {
                 />
             </Link>
         )
-    };
-    return <ul>{items.length ? renderItems(items) : <li>{error}</li>}</ul>
-};
+    }
+    return <List>{items.length ? renderItems(items) : <ListItem alignItems="flex-start"><ListItemText>{error}</ListItemText></ListItem>}</List>
+}
 
-export default List;
+export default DirectorsList;

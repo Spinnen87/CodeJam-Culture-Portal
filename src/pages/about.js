@@ -6,16 +6,16 @@ import Layout from '../components/layout';
 import Developers from '../components/developers';
 
 const about = () => {
-  return (
-    <I18n>
-      {t => (
-        <Layout>
-          <Developers developers={t('Developers')} />
-        </Layout>
-      )}
-    </I18n>
-  );
-};
+    return (
+        <I18n>
+            {t => (
+                <Layout>
+                    <Developers developers={t('Developers')} aboutDevelopers={t('About developers')}  />
+                </Layout>
+            )}
+        </I18n>
+    );
+}
 
 export default withI18next()(about);
 
