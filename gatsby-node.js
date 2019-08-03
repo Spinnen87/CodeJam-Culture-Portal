@@ -23,7 +23,9 @@ exports.createPages = ({ graphql, actions }) => {
                     createPage({
                         path: edge.node.path,
                         component: DirectorTemplate,
-                        context: { pathToPage: edge.node.path }
+                        context: { 
+                            pathToPage: edge.node.path 
+                        }
                     })
                 })
                 return;
