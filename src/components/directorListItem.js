@@ -1,16 +1,38 @@
 import React from 'react';
+import ListItem from '@material-ui/core/ListItem';
+import Divider from '@material-ui/core/Divider';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import Avatar from '@material-ui/core/Avatar';
+import Typography from '@material-ui/core/Typography';
 
-const ListItem = ({ title, avatar, birthDate, deathDate, description }) => {
+const DirectorsListItem = ({ title, avatar, birthDate, deathDate, description }) => {
     return (
-        <li>
-            <img src={avatar} alt="director's photo" />
-            <div>
-                <h2>{title}</h2>
-                <p>{`${birthDate}-${deathDate}`}</p>
-                <p>{description}</p>
-            </div>
-        </li>
-    )
-};
+        <React.Fragment>
+            <ListItem alignItems="flex-start">
+                <ListItemAvatar>
+                    <Avatar alt="Remy Sharp" src={avatar} />
+                </ListItemAvatar>
 
-export default ListItem;
+                <ListItemText
+                    primary={title}
+                    secondary={
+                        <React.Fragment>
+                            <Typography
+                                component="span"
+                                variant="body2"
+                                color="textPrimary"
+                            >
+                                {`${birthDate}-${deathDate} `}
+                            </Typography>
+                            {description}
+                        </React.Fragment>
+                    }
+                />
+            </ListItem>
+            <Divider variant="inset" component="li" />
+        </React.Fragment>
+    )
+}
+
+export default DirectorsListItem;
