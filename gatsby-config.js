@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/gatsby-i18n/gatsby-starter-i18next',
+  pathPrefix: '/CodeJam-Culture-Portal',
   plugins: [
     {
       resolve: `gatsby-plugin-material-ui`,
