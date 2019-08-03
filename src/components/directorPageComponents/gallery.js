@@ -10,7 +10,7 @@ const Gallery = ({ data, t }) => {
             <Typography variant="h6" color="textSecondary" component="p" >
                 {t('Gallery')}
             </Typography>
-            <ImageGallery items={data.map(img => ({ original: img, thumbnail: img }))} />
+            <ImageGallery items={data.map(img => ({ original: img, thumbnail: img, originalClass: 'gallery' }))} />
         </div>
     )
 }
