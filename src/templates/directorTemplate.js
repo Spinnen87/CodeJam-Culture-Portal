@@ -57,8 +57,8 @@ class DirectorTemplate extends Component {
       <I18n>
         {t => (
           <Layout>
-            <Grid container spacing={5}>
-              <Grid item xs={12} md={9}>
+            <Grid container spacing={1}>
+              <Grid item xs={12} md={10}>
                 <Grid container spacing={5}>
                   <Grid item xs={12} md={3}>
                     <CardMedia
@@ -92,7 +92,7 @@ class DirectorTemplate extends Component {
 
               </Grid>
               <Hidden xsDown>
-                <Grid item md={3} posi>
+                <Grid item md={2} >
                   <ListSubheader>
                     <Typography variant="subtitle1">
                       {t('Director content')}

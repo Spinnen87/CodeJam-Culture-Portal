@@ -43,7 +43,7 @@ class SearchPage extends Component {
             </Typography>
 
 
-            <Grid item xs={6}>
+            <Grid item xs={12} md={8}>
               <TextField
                 id="standard-search"
                 label={t('Placeholder')}

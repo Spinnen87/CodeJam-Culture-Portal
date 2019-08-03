@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
   toolbarSecondary: {
     justifyContent: 'space-between',
     overflowX: 'auto',
-    borderBottom: `1px solid ${theme.palette.divider}`
+    borderBottom: `1px solid ${theme.palette.divider}`,
+    marginBottom: '20px'
   },
   toolbarLink: {
     padding: theme.spacing(1),
@@ -34,15 +35,15 @@ const Header = ({ siteTitle, listOfArch, about, homePage }) => {
     <React.Fragment>
       <Container maxWidth="lg" component="header">
         <Toolbar className={classes.toolbar}>
-            <Typography
-              component="h1"
-              variant="h4"
-              color="inherit"
-              className={classes.toolbarTitle}
-            >
-              {siteTitle}
-            </Typography>
-            <Switcher />
+          <Typography
+            component="h1"
+            variant="h4"
+            color="inherit"
+            className={classes.toolbarTitle}
+          >
+            {siteTitle}
+          </Typography>
+          <Switcher />
         </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
           <Link to="/" className={classes.toolbarLink} color="secondary" >

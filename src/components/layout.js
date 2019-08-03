@@ -5,6 +5,7 @@ import Header from './header';
 import Footer from './footer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
 
 const Layout = ({ children, t }) => {
   return (
@@ -21,14 +22,16 @@ const Layout = ({ children, t }) => {
         />
         <meta name="description" content="The information on this portal is dedicated to the Belarusian Union of cinematographers" />
         <meta name="keywords" content="Film directors, the Rolling Scope, CodeJam Culture Portal" />
-        <CssBaseline />
+
       </Head>
+      <CssBaseline />
       <Header siteTitle={t('Site title')} listOfArch={t('List of Directors')} about={t('About us')} homePage={t('Home Page')} />
-      <Container maxWidth="lg">
+      <Container>
         {children}
       </Container>
       <Footer siteTitle={t('Site title')} />
-    </React.Fragment>
+
+    </React.Fragment >
   );
 }
 

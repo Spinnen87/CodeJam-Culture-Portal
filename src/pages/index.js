@@ -73,7 +73,6 @@ const IndexPage = () => {
         <Layout>
           <main>
             <Paper className={classes.mainFeaturedPost}>
-              {/* Increase the priority of the hero background image */}
               {
                 <img
                   style={{ display: 'none' }}

@@ -19,13 +19,20 @@ const DirectorsListItem = ({ title, avatar, birthDate, deathDate, description })
                     secondary={
                         <React.Fragment>
                             <Typography
-                                component="span"
+                                component="p"
                                 variant="body2"
                                 color="textPrimary"
                             >
                                 {`${birthDate}-${deathDate} `}
                             </Typography>
-                            {description}
+                            <Typography
+                                component="p"
+                                variant="body1"
+                                color="textPrimary"
+                            >
+                                {description}
+                            </Typography>
+
                         </React.Fragment>
                     }
                 />
