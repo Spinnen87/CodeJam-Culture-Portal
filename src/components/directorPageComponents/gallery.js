@@ -1,7 +1,7 @@
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import { translate } from 'react-i18next';
-import './ImageGallery.css';
+import './imageGallery.css';
 import Typography from '@material-ui/core/Typography';
 
 const Gallery = ({ data, t }) => {

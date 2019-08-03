@@ -66,7 +66,7 @@ const team = [
         src:
             'https://avatars3.githubusercontent.com/u/47743186?s=460&v=4',
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+            'Teamlead. Gatsby + i18nnext',
     },
     {
         name: 'Alexandrina Lizurchik',
@@ -75,7 +75,7 @@ const team = [
         src:
             'https://avatars2.githubusercontent.com/u/40288176?s=460&v=4',
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+            'Project menager',
     },
     {
         name: 'Maxim Semikov',
@@ -84,7 +84,7 @@ const team = [
         src:
             'https://avatars0.githubusercontent.com/u/10222003?s=460&v=4',
         description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+            'Material-UI',
 
     },
     {
@@ -94,7 +94,7 @@ const team = [
         src:
             'https://avatars1.githubusercontent.com/u/41293675?s=460&v=4',
         description:
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt! `,
+            `Contentful`,
     }
 ]
 
