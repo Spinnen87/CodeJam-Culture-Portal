@@ -16,15 +16,19 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import CardMedia from '@material-ui/core/CardMedia';
 import Divider from '@material-ui/core/Divider';
+import lightBlue from '@material-ui/core/colors/lightBlue';
 
 const useStyles = makeStyles(theme => ({
   grid: {
     margin: `${theme.spacing(7)}px auto`
   },
+  gridTitel: {
+    marginBottom: `${theme.spacing(3)}px`
+  },
   title: {
-    paddingTop: '20px',
     fontWeight: 'bold',
-    marginTop: '25px'
+    marginTop: '20px',
+    color: lightBlue[600],
   }
 }));
 
@@ -37,9 +41,9 @@ function DirectorTemplate(props) {
         <Layout>
           <Grid container spacing={1} >
             <Grid item xs={12} md={12}>
-              <Grid container spacing={5}>
-                <Grid className={classes.grid} item xs={12} md={3}>
-                  <CardMedia component="img" alt="Contemplative Reptile" height="250" image={avatar} title="Contemplative Reptile" />
+              <Grid container spacing={5} className={classes.gridTitel} >
+                <Grid item xs={12} md={3}>
+                  <CardMedia component="img" alt={`${title}`} height="250" image={avatar} title={`${title}`} />
                 </Grid>
                 <Grid item xs={12} md={9}>
                   <Typography className={classes.title} variant="h4" gutterBottom id={'title'}>{`${title}`}</Typography>

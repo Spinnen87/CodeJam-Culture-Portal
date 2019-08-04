@@ -20,21 +20,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-import { makeStyles } from '@material-ui/core/styles';
-
-const useStyles = makeStyles(theme => ({
-  appContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    minHeight: '100vh',
-  },
-  mainContent: {
-    flexGrow: '1',
-    flexShrink: '0',
-    flexBasis: 'auto',
-  },
-}));
-
 const Layout = ({ children, t }) => {
   const classes = useStyles();
   return (

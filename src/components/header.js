@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
+import lightBlue from '@material-ui/core/colors/lightBlue';
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -12,6 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbarTitle: {
     flex: 1,
+    color: lightBlue[600],
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -22,6 +24,9 @@ const useStyles = makeStyles(theme => ({
   toolbarLink: {
     padding: theme.spacing(1),
     flexShrink: 0,
+    '&:hover': {
+      color: lightBlue[600],
+  }
   },
 }));
 
@@ -34,7 +39,6 @@ const Header = ({ siteTitle, listOfArch, about, homePage }) => {
           <Typography
             component="h1"
             variant="h4"
-            color="inherit"
             className={classes.toolbarTitle}
           >
             {siteTitle}

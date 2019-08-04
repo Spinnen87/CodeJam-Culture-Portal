@@ -92,7 +92,7 @@ const Developers = ({ developers, aboutDevelopers }) => {
     return (
         <React.Fragment>
             <Typography variant="h6" margin='dense' gutterBottom>{developers}</Typography>
-            <Typography variant="h5" margin='dense' align='center' gutterBottom>Dream Team!</Typography>
+            <Typography variant="h5" margin='dense' align='center' gutterBottom>Team 17</Typography>
             <Typography variant="subtitle1" margin='dense' gutterBottom>{aboutDevelopers}</Typography>
             <Container maxWidth="lg" className={classes.cardGrid} >
                 <Grid container spacing={2}>
