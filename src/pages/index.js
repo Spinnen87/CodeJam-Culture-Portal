@@ -5,18 +5,14 @@ import { Link } from 'gatsby-plugin-i18next';
 import { withI18next } from 'gatsby-plugin-i18next';
 import Layout from '../components/layout';
 import DaysAuthor from '../components/daysAuthor';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
 import indexImg from "../images/indexImg.jpg";
 
-const CollisionLink = React.forwardRef((props, ref) => (
-  <Link to="/directors-list/" {...props} />
-));
+const CollisionLink = React.forwardRef((props, ref) => (<Link to="/directors-list/" {...props} />));
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -73,25 +69,15 @@ const IndexPage = () => {
         <Layout>
           <main>
             <Paper className={classes.mainFeaturedPost}>
-              {
-                <img
-                  style={{ display: 'none' }}
-                  src={indexImg}
-                  alt="background"
-                />
-              }
+              {<img style={{ display: 'none' }} src={indexImg} alt="background" />}
               <div className={classes.overlay} />
               <Grid container>
                 <Grid item md={6}>
                   <div className={classes.mainFeaturedPostContent}>
-                    <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                      {t('FirstPageTitle')}
-                    </Typography>
-
+                    <Typography component="h1" variant="h3" color="inherit" gutterBottom>{t('FirstPageTitle')}</Typography>
                     <Button variant="contained" component={CollisionLink} color="secondary" className={classes.button}>
                       {t('List of Directors')}
                     </Button>
-
                   </div>
                 </Grid>
               </Grid>

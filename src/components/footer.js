@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby-plugin-i18next';
 import { makeStyles } from '@material-ui/core/styles';
-
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
@@ -13,22 +12,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Footer = ({ siteTitle }) => {
+const Footer = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
       <footer className={classes.footer}>
         <Container>
-          <Typography variant="subtitle1" align="center" gutterBottom>
-            CodeJam Culture Portal
-          </Typography>
-          <Typography variant="subtitle2" align="center" color="textSecondary" component="p">
-            Built with love by the Dream team.
-          </Typography>
+          <Typography variant="subtitle1" align="center" gutterBottom>CodeJam Culture Portal</Typography>
+          <Typography variant="subtitle2" align="center" color="textSecondary" component="p">Built with love by team 17.</Typography>
         </Container>
       </footer>
-
-    </React.Fragment >
+    </React.Fragment>
   )
 };
 

@@ -5,7 +5,6 @@ import { withI18next } from 'gatsby-plugin-i18next';
 import i18next from 'i18next';
 import Layout from '../components/layout';
 import DirectorsList from '../components/directorsList';
-
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -41,9 +40,7 @@ class SearchPage extends Component {
             <Typography variant="h6" margin='dense' gutterBottom>
               {t('List of Directors')}
             </Typography>
-
-
-            <Grid item xs={12} md={8}>
+            <Grid item xs={12} md={12}>
               <TextField
                 id="standard-search"
                 label={t('Placeholder')}
@@ -53,7 +50,6 @@ class SearchPage extends Component {
                 fullWidth="true"
                 onChange={(e) => this.searchHandler(e)}
               />
-
               {this.state.items && <DirectorsList items={this.state.items} error={t('Not Found')} />}
             </Grid>
           </Layout>

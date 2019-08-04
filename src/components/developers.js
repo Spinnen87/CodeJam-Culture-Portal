@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -11,7 +10,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-
 
 const useStyles = makeStyles(theme => ({
     icon: {
@@ -34,14 +32,14 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
     },
     cardContent: {
         flexGrow: 1,
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
     },
     button: {
         margin: theme.spacing(1),
@@ -57,44 +55,35 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-
 const team = [
     {
         name: 'Andrey Aksenov',
         nickname: 'aksr666',
         gitHub: 'https://github.com/aksr666',
-        src:
-            'https://avatars3.githubusercontent.com/u/47743186?s=460&v=4',
-        description:
-            'Teamlead. Gatsby + i18nnext',
+        src: 'https://avatars3.githubusercontent.com/u/47743186?s=460&v=4',
+        description: 'Teamlead. Gatsby + i18nnext'
     },
     {
         name: 'Alexandrina Lizurchik',
         nickname: 'alexalizurchik',
         gitHub: 'https://github.com/alexalizurchik',
-        src:
-            'https://avatars2.githubusercontent.com/u/40288176?s=460&v=4',
-        description:
-            'Project menager',
+        src: 'https://avatars2.githubusercontent.com/u/40288176?s=460&v=4',
+        description: 'Project menager'
     },
     {
         name: 'Maxim Semikov',
         nickname: 'Spinnen87',
         gitHub: 'https://github.com/Spinnen87',
-        src:
-            'https://avatars0.githubusercontent.com/u/10222003?s=460&v=4',
-        description:
-            'Material-UI',
+        src: 'https://avatars0.githubusercontent.com/u/10222003?s=460&v=4',
+        description: 'Material-UI'
 
     },
     {
         name: 'Andrey Markushevsky',
         nickname: 'PresidentsBoyfriend',
         gitHub: 'https://github.com/PresidentsBoyfriend',
-        src:
-            'https://avatars1.githubusercontent.com/u/41293675?s=460&v=4',
-        description:
-            `Contentful`,
+        src: 'https://avatars1.githubusercontent.com/u/41293675?s=460&v=4',
+        description: `Contentful`
     }
 ]
 
@@ -104,50 +93,33 @@ const Developers = ({ developers, aboutDevelopers }) => {
         <React.Fragment>
             <Typography variant="h6" margin='dense' gutterBottom>{developers}</Typography>
             <Typography variant="h5" margin='dense' align='center' gutterBottom>Dream Team!</Typography>
-            <Typography variant="subtitle1" margin='dense' gutterBottom>
-                {aboutDevelopers}
-            </Typography>
+            <Typography variant="subtitle1" margin='dense' gutterBottom>{aboutDevelopers}</Typography>
             <Container maxWidth="lg" className={classes.cardGrid} >
                 <Grid container spacing={2}>
                     {team.map((item, i) =>
                         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                             <Card className={classes.card}>
                                 <CardHeader
-                                    avatar={
-                                        <Avatar aria-label="recipe" className={classes.avatar} >
-                                            {item.name[0]}
-                                        </Avatar>
-                                    }
+                                    avatar={<Avatar aria-label="recipe" className={classes.avatar}>{item.name[0]}</Avatar>}
                                     title={item.name}
                                     subheader={item.nickname}
                                 />
-                                <CardMedia
-                                    className={classes.media}
-                                    image={item.src}
-                                    title="Paella dish"
-                                />
+                                <CardMedia className={classes.media} image={item.src} title="Paella dish" />
                                 <CardContent>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {item.description}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href={item.gitHub} >
-                                        GitHub
-                                     </Button>
-
+                                    <Button size="small" color="primary" href={item.gitHub}>GitHub</Button>
                                 </CardActions>
-                            </Card >
+                            </Card>
                         </Grid>
                     )}
                 </Grid>
             </Container>
-
-
-
-        </React.Fragment >
+        </React.Fragment>
     )
-
 };
 
 export default Developers;

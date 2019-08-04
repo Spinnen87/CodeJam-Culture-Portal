@@ -2,11 +2,23 @@ import React from 'react';
 import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 import { translate } from 'react-i18next';
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import lightBlue from '@material-ui/core/colors/lightBlue';
+
+const useStyles = makeStyles(theme => ({
+    typography: {
+      margin: `${theme.spacing(7)}px auto`,
+      textAlign: 'center',
+      fontWeight: 'bold',
+      color: lightBlue[600]
+    }
+  }));
 
 const GoogleMap = ({ data, google, t }) => {
+    const classes = useStyles();
     return (
         <div style={{ position: 'relative', height: '500px' }} id={'map'}>
-            <Typography variant="h6" color="textSecondary" component="p" id='timeline'>
+            <Typography className={classes.typography} variant="h4" color="textSecondary" component="p" id='timeline'>
                 {t('Map')}
             </Typography>
             <Map google={google}

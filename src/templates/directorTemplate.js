@@ -11,106 +11,59 @@ import WorksTable from '../components/directorPageComponents/worksTable';
 import Navigation from '../components/directorPageComponents/directorsPageNavigation';
 import OnTop from '../components/directorPageComponents/onTop';
 import '../style.css';
-
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import Divider from '@material-ui/core/Divider';
 
-
-class DirectorTemplate extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showOnTopButton: false
-    }
+const useStyles = makeStyles(theme => ({
+  grid: {
+    margin: `${theme.spacing(7)}px auto`
+  },
+  title: {
+    paddingTop: '20px',
+    fontWeight: 'bold',
+    marginTop: '25px'
   }
+}));
 
-  componentDidMount() {
-    const scrollWidth = document.documentElement.scrollWidth;
-    window.addEventListener('scroll', () => {
-      if (pageYOffset > scrollWidth / 2 && !this.state.showOnTopButton) this.showOnTopButton();
-      else if (this.state.showOnTopButton && pageYOffset < scrollWidth / 2) this.hideOnTopButton();
-    });
-  }
-
-  showOnTopButton() {
-    this.setState({ showOnTopButton: true });
-  }
-
-  hideOnTopButton() {
-    this.setState({ showOnTopButton: false });
-  }
-
-  render() {
-    const { title, description, birthDate, deathDate, avatar, video, activity, googleMaps, gallery, works } = this.props.data.contentfulDirector;
-
-    return (
-      <I18n>
-        {t => (
-          <Layout>
-            <Grid container spacing={1}>
-              <Grid item xs={12} md={10}>
-                <Grid container spacing={5}>
-                  <Grid item xs={12} md={3}>
-                    <CardMedia
-                      component="img"
-                      alt="Contemplative Reptile"
-                      height="250"
-                      image={avatar}
-                      title="Contemplative Reptile"
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={9}>
-                    <Typography variant="h4" gutterBottom id={'title'}>
-                      {title}
-                    </Typography>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {`${birthDate}-${deathDate}`}
-                    </Typography>
-                    <Typography variant="subtitle1" gutterBottom>
-                      {description}
-                    </Typography>
-                  </Grid>
+function DirectorTemplate(props) {
+  const { title, description, birthDate, deathDate, avatar, video, activity, googleMaps, gallery, works } = props.data.contentfulDirector;
+  const classes = useStyles();
+  return (
+    <I18n>
+      {t => (
+        <Layout>
+          <Grid container spacing={1} >
+            <Grid item xs={12} md={12}>
+              <Grid container spacing={5}>
+                <Grid className={classes.grid} item xs={12} md={3}>
+                  <CardMedia component="img" alt="Contemplative Reptile" height="250" image={avatar} title="Contemplative Reptile" />
                 </Grid>
-                {/* <Divider /> */}
-                <TimeLine data={activity.activity} />
-
-                <Youtube data={video} />
-
-                <WorksTable data={works.works} />
-                <Gallery data={gallery.gallery} />
-                <GoogleMap data={googleMaps.googleMaps} />
-
+                <Grid item xs={12} md={9}>
+                  <Typography className={classes.title} variant="h4" gutterBottom id={'title'}>{`${title}`}</Typography>
+                  <Typography variant="subtitle1" gutterBottom>{`${birthDate}-${deathDate}`}</Typography>
+                  <Typography variant="subtitle1" gutterBottom>{description}</Typography>
+                </Grid>
               </Grid>
-              <Hidden xsDown>
-                <Grid item md={2} >
-                  <ListSubheader>
-                    <Typography variant="subtitle1">
-                      {t('Director content')}
-                    </Typography>
-                    <Navigation timeLine={t('TimeLine')} table={t('Table')} map={t('Map')} gallery={t('Gallery')} />
-                  </ListSubheader>
-                </Grid>
-              </Hidden>
+              <Divider />
+              <Grid className={classes.grid}><TimeLine data={activity.activity} /></Grid>
+              <Grid className={classes.grid}><Youtube data={video} /></Grid>
+              <Grid className={classes.grid}><WorksTable data={works.works} /></Grid>
+              <Grid className={classes.grid}><Gallery data={gallery.gallery} /></Grid>
+              <Grid className={classes.grid}><GoogleMap data={googleMaps.googleMaps} /></Grid>
             </Grid>
-
-            {this.state.showOnTopButton && <OnTop />}
-          </Layout>
-        )
-        }
-      </I18n>
-    )
-  }
+            <Navigation />
+          </Grid>
+          <OnTop />
+        </Layout>
+      )
+      }
+    </I18n>
+  )
 }
+
 
 
 export default withI18next()(DirectorTemplate);
