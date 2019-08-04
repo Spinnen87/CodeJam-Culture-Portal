@@ -78,3 +78,4 @@
 | 3h | project refactor |
 
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/52b67182-0f1c-4fd8-abed-fff7f25c37cd/deploy-status)](https://app.netlify.com/sites/codejam-culture-portal/deploys)
