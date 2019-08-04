@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    alingItems: 'center',
+    alignItems: 'center',
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6),
@@ -90,7 +90,7 @@ const IndexPage = () => {
                 </Grid>
               </Grid>
             </Paper>
-            <Typography variant="subtitle1" color="inherit" paragraph>{t('Description')}</Typography>
+            <Typography variant="subtitle1" color="inherit" paragraph align="justify">{t('Description')}</Typography>
             <DaysAuthor title={t('Days Author')} author={t('Days Author Name')} authorDescription={t('Days Author Description')} btn={t('Button')} />
           </main>
         </Layout>

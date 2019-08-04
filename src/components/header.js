@@ -11,23 +11,33 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
     flexWrap: 'wrap',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   toolbarTitle: {
     flex: 1,
     textAlign: 'center',
     fontWeight: 'bold',
+    minWidth: '400px',
+    fontSize: '1.5rem',
+    [theme.breakpoints.up('sm')]: {
+      fontSize: '2rem',
+    },
     [theme.breakpoints.up('md')]: {
       textAlign: 'left',
+      minWidth: '500px',
     },
     marginBottom: '10px',
   },
   toolbarSecondary: {
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
     overflowX: 'auto',
     borderBottom: `1px solid ${theme.palette.divider}`,
-    marginBottom: '20px'
+    marginBottom: '20px',
+    [theme.breakpoints.up('sm')]: {
+      justifyContent: 'space-between',
+      flexDirection: 'row',
+    },
   },
   toolbarLink: {
     padding: theme.spacing(1),
