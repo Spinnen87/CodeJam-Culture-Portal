@@ -39,7 +39,6 @@
 | 2h | create developers component  |
 | 3h | create locales  |
 | 2h | create about page  | 
-| 2h | refactoring | 
 
 
 **aksr666**
@@ -52,6 +51,7 @@
 | 2h | create timeline component |
 | 2h | create gallery component |
 | 2h | create geowidget component |
+| 2h | refactoring | 
 
 
 **PresidentsBoyfriend**
