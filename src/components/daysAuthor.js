@@ -92,7 +92,7 @@ export default function DaysAuthor(props) {
                         <Hidden xsDown>
                             <CardMedia
                                 className={classes.cardMedia}
-                                image="http://xn--80alhdjhdcxhy5hl.xn--p1ai/sites/zhurmir/files/authors/kusachkov_vladimir.jpg"
+                                image="https://www.sb.by/upload/iblock/b57/b57fc08d48e7c2fda85ca0963ea42ef3.jpg"
                                 title={props.author}
                             />
                         </Hidden>
