@@ -81,15 +81,11 @@ class DirectorTemplate extends Component {
                     </Typography>
                   </Grid>
                 </Grid>
-                {/* <Divider /> */}
                 <TimeLine data={activity.activity} />
-
                 <Youtube data={video} />
-
                 <WorksTable data={works.works} />
                 <Gallery data={gallery.gallery} />
                 <GoogleMap data={googleMaps.googleMaps} />
-
               </Grid>
               <Hidden xsDown>
                 <Grid item md={2} >
@@ -102,7 +98,6 @@ class DirectorTemplate extends Component {
                 </Grid>
               </Hidden>
             </Grid>
-
             {this.state.showOnTopButton && <OnTop />}
           </Layout>
         )

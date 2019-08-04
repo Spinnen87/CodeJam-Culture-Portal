@@ -1,8 +1,8 @@
 import React from 'react';
-import ImageGallery from 'react-image-gallery';
 import { translate } from 'react-i18next';
-import './ImageGallery.css';
 import Typography from '@material-ui/core/Typography';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
 const Gallery = ({ data, t }) => {
     return (
@@ -10,7 +10,9 @@ const Gallery = ({ data, t }) => {
             <Typography variant="h6" color="textSecondary" component="p" >
                 {t('Gallery')}
             </Typography>
-            <ImageGallery items={data.map(img => ({ original: img, thumbnail: img }))} />
+            <Carousel centerMode={false} infiniteLoop={true} showThumbs={false}>
+                {data.map((img, i) => <div key={i}><img className={'gallery'} src={img} /></div>)}
+            </Carousel>
         </div>
     )
 }

@@ -63,38 +63,30 @@ const team = [
         name: 'Andrey Aksenov',
         nickname: 'aksr666',
         gitHub: 'https://github.com/aksr666',
-        src:
-            'https://avatars3.githubusercontent.com/u/47743186?s=460&v=4',
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+        src: 'https://avatars3.githubusercontent.com/u/47743186?s=460&v=4',
+        description: 'Teamlead. Gatsby + i18nnext'
     },
     {
         name: 'Alexandrina Lizurchik',
         nickname: 'alexalizurchik',
         gitHub: 'https://github.com/alexalizurchik',
-        src:
-            'https://avatars2.githubusercontent.com/u/40288176?s=460&v=4',
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+        src: 'https://avatars2.githubusercontent.com/u/40288176?s=460&v=4',
+        description: 'Project menager'
     },
     {
         name: 'Maxim Semikov',
         nickname: 'Spinnen87',
         gitHub: 'https://github.com/Spinnen87',
-        src:
-            'https://avatars0.githubusercontent.com/u/10222003?s=460&v=4',
-        description:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt!',
+        src: 'https://avatars0.githubusercontent.com/u/10222003?s=460&v=4',
+        description: 'Material-UI'
 
     },
     {
         name: 'Andrey Markushevsky',
         nickname: 'PresidentsBoyfriend',
         gitHub: 'https://github.com/PresidentsBoyfriend',
-        src:
-            'https://avatars1.githubusercontent.com/u/41293675?s=460&v=4',
-        description:
-            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum corrupti illo, delectus beatae iusto maxime ipsam minus fugiat quam architecto officia laudantium temporibus cumque, consequatur ab, adipisci molestias odio deserunt! `,
+        src: 'https://avatars1.githubusercontent.com/u/41293675?s=460&v=4',
+        description: `Contentful`
     }
 ]
 
@@ -104,9 +96,7 @@ const Developers = ({ developers, aboutDevelopers }) => {
         <React.Fragment>
             <Typography variant="h6" margin='dense' gutterBottom>{developers}</Typography>
             <Typography variant="h5" margin='dense' align='center' gutterBottom>Dream Team!</Typography>
-            <Typography variant="subtitle1" margin='dense' gutterBottom>
-                {aboutDevelopers}
-            </Typography>
+            <Typography variant="subtitle1" margin='dense' gutterBottom>{aboutDevelopers}</Typography>
             <Container maxWidth="lg" className={classes.cardGrid} >
                 <Grid container spacing={2}>
                     {team.map((item, i) =>
@@ -135,19 +125,14 @@ const Developers = ({ developers, aboutDevelopers }) => {
                                     <Button size="small" color="primary" href={item.gitHub} >
                                         GitHub
                                      </Button>
-
                                 </CardActions>
                             </Card >
                         </Grid>
                     )}
                 </Grid>
             </Container>
-
-
-
         </React.Fragment >
     )
-
 };
 
 export default Developers;

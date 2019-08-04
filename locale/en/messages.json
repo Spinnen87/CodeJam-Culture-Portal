@@ -22,5 +22,6 @@
   "Gallery": "Gallery",
   "About us": "About us",
   "About developers": "This portal was developed using the gatsbyjs static site generator. Content management is carried out using the confentful content management API, which allows cross-platform online publishing on multiple devices. For visual design of the portal, the material-ui library was used, which allows you to create applications in the style of Google Material Design using React components. The content and interface of the portal is available in 3 three languages: Russian, Belarusian and English. The portal is also adaptive for viewing on mobile devices.",
-  "Director content": "Content"
+  "Director content": "Content",
+  "Show video": "Watch video"
 }
