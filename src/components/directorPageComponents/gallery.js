@@ -8,12 +8,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const useStyles = makeStyles(theme => ({
     typography: {
-      textAlign: 'center',
-      margin: `${theme.spacing(7)}px auto`,
-      fontWeight: 'bold',
-      color: lightBlue[600]
+        textAlign: 'center',
+        margin: `${theme.spacing(7)}px auto`,
+        fontWeight: 'bold',
+        color: lightBlue[600]
     }
-  }));
+}));
 
 const Gallery = ({ data, t }) => {
     const classes = useStyles();
