@@ -1,26 +1,80 @@
-# gatsby-starter-default
-The default Gatsby starter.
+1. **Task** - [link](https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/codejam-culture-portal.md)
+2. **Screenshot** - [link](http://prntscr.com/oo2oe5)
+3. **04.08.2019 / 04.08.2019**
+4. **Culture Portal** [link](https://codejam-culture-portal.netlify.com/ru/)
+5. **Total:** Task(14/14)
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+**Min scope - (3/3)**
+- [x] 10 Main page + page with a list of authors + author's page (only html)
+- [x] 10 Page with list of authors contains search widget
+- [x] 20 Portal has two languages
 
-## Install
+**Normal scope - (7/7)**
+- [x] 10 Author's page contains timeline
+- [x] 10 Author's page contains video overlay
+- [x] 20 Author's page contains photo gallery
+- [x] 10 Author's page contains map (geowidget)
+- [x] from 10 to 40 Project is made using react (max 40 - if all widgets are done in React)
+- [x] from 0 to 20 Design
+- [x] 20 material-ui / bootstrap is used
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+**Extra scope - (4/4)**
+- [x] 10 Confidence of the project presentation
+- [x] 30 Project is made using gatsbyjs
+- [x] 20 contentful / netlify cms is used for content management
+- [x] 10 Portal has third language
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+**Mark calculation : 240**  
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-gatsby develop
-```
+6. **Work log:**
 
-## Deploy
+**alexalizurchik**
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+| time spend  | feature  |
+| ------------- | ------------- |
+| 2h | create directorList component  |
+| 2h | create directorListItem component  |
+| 2h | create daysAuthor component  |
+| 2h | create developers component  |
+| 3h | create locales  |
+| 2h | create about page  | 
+| 2h | refactoring | 
+
+
+**aksr666**
+
+
+| time spend  | feature  |
+| -----------|------------- |
+| 3h | based strucrute of the project |
+| 2h | create youtube component |
+| 2h | create timeline component |
+| 2h | create gallery component |
+| 2h | create geowidget component |
+
+
+**PresidentsBoyfriend**
+
+
+| time spend  | feature  |
+| -----------|------------- |
+| 2h | create header component |
+| 2h | create i18next switcher component |
+| 2h | create layout component |
+| 2h | create director page navigation |
+| 3h | fill contentfull |
+| 2h | translate all content |
+
+
+**Spinnen87**
+
+
+| time spend  | feature  |
+| -----------|------------- |
+| 4h | wrap all components(i18next) |
+| 2h | create footer component |
+| 8h | learing material_ui + design all project |
+| 3h | project refactor |
+
+
