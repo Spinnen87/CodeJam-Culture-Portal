@@ -47,7 +47,7 @@ class SearchPage extends Component {
                 type="search"
                 margin="dense"
                 variant="outlined"
-                fullWidth="true"
+                fullWidth={true}
                 onChange={(e) => this.searchHandler(e)}
               />
               {this.state.items && <DirectorsList items={this.state.items} error={t('Not Found')} />}

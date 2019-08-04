@@ -68,3 +68,12 @@ ul {
         display: none;
     }
 }
+
+@media (max-width: 500px) {
+    #gallery {
+        padding: 0;
+    }
+    .onTop-button {
+        display: none;
+    }
+}

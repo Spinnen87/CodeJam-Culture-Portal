@@ -10,7 +10,7 @@ const about = () => {
         <I18n>
             {t => (
                 <Layout>
-                    <Developers developers={t('Developers')} aboutDevelopers={t('About developers')}  />
+                    <Developers developers={t('Developers')} aboutDevelopers={t('About developers')} />
                 </Layout>
             )}
         </I18n>

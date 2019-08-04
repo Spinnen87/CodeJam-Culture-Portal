@@ -16,7 +16,6 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-
 const DirectorsListItem = ({ title, avatar, birthDate, deathDate, description }) => {
     const classes = useStyles();
     return (
@@ -30,11 +29,8 @@ const DirectorsListItem = ({ title, avatar, birthDate, deathDate, description })
                     className={classes.listItemText}
                     secondary={
                         <React.Fragment>
-                            <Typography component="p" variant="body2" color="textPrimary">
-                                {`${birthDate}-${deathDate}`}
-                            </Typography>
-                            <Typography component="p" variant="body1" color="textPrimary">
-                                {description}
+                            <Typography component="span" variant="body2" color="textPrimary">
+                                {`${birthDate}-${deathDate}`}<br />{description}
                             </Typography>
                         </React.Fragment>
                     }

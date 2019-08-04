@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
   },
   mainFeaturedPostContent: {
     position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    alingItems: 'center',
     padding: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(6),
@@ -58,7 +61,12 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     margin: theme.spacing(1),
+    textAlign: 'center'
   },
+  banerTitel: {
+    fontSize: '2em',
+    textAlign: 'center',
+  }
 }));
 
 const IndexPage = () => {
@@ -74,7 +82,7 @@ const IndexPage = () => {
               <Grid container>
                 <Grid item md={6}>
                   <div className={classes.mainFeaturedPostContent}>
-                    <Typography component="h1" variant="h3" color="inherit" gutterBottom>{t('FirstPageTitle')}</Typography>
+                    <Typography component="h1" variant="h3" color="inherit" gutterBottom className={classes.banerTitel}>{t('FirstPageTitle')}</Typography>
                     <Button variant="contained" component={CollisionLink} color="secondary" className={classes.button}>
                       {t('List of Directors')}
                     </Button>

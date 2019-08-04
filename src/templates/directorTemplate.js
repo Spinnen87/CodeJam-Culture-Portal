@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { I18n } from 'react-i18next';
 import { withI18next } from 'gatsby-plugin-i18next';
@@ -10,7 +10,6 @@ import Gallery from '../components/directorPageComponents/gallery';
 import WorksTable from '../components/directorPageComponents/worksTable';
 import Navigation from '../components/directorPageComponents/directorsPageNavigation';
 import OnTop from '../components/directorPageComponents/onTop';
-import '../style.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
@@ -28,7 +27,6 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontWeight: 'bold',
     marginTop: '20px',
-    color: lightBlue[600],
   }
 }));
 
@@ -67,8 +65,6 @@ function DirectorTemplate(props) {
     </I18n>
   )
 }
-
-
 
 export default withI18next()(DirectorTemplate);
 
@@ -115,4 +111,4 @@ locales: allLocale(filter: {lng: {eq: $lng }, ns: {eq: "messages" } }) {
   ...TranslationFragment
   }
 }
-`
+`;

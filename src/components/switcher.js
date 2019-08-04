@@ -20,6 +20,4 @@ const Switcher = ({ changeLng, lng, availableLngs }) => (
   </React.Fragment>
 );
 
-export default props => (
-  <Language>{lngProps => <Switcher {...props} {...lngProps} />}</Language>
-);
+export default props => <Language>{lngProps => <Switcher {...props} {...lngProps} />}</Language>;

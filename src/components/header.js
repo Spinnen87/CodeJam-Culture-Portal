@@ -10,13 +10,21 @@ import lightBlue from '@material-ui/core/colors/lightBlue';
 const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   toolbarTitle: {
     flex: 1,
-    color: lightBlue[600],
+    textAlign: 'center',
+    fontWeight: 'bold',
+    [theme.breakpoints.up('md')]: {
+      textAlign: 'left',
+    },
+    marginBottom: '10px',
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
     overflowX: 'auto',
     borderBottom: `1px solid ${theme.palette.divider}`,
     marginBottom: '20px'
@@ -26,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     flexShrink: 0,
     '&:hover': {
       color: lightBlue[600],
-  }
+    }
   },
 }));
 
