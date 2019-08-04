@@ -40,13 +40,12 @@ const Layout = ({ children, t }) => {
       <CssBaseline />
       <div className={classes.appContainer}>
         <Header siteTitle={t('Site title')} listOfArch={t('List of Directors')} about={t('About us')} homePage={t('Home Page')} />
-        <Container className={classes.mainContent}>
-          {children}
-        </Container>
-        <Footer siteTitle={t('Site title')} />
+        <Container className={classes.mainContent}>{children}</Container>
+        <Footer />
       </div>
-    </React.Fragment >
+    </React.Fragment>
   );
 }
 
 export default translate()(Layout);
+

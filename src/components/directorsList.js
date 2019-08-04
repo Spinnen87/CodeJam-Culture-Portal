@@ -1,7 +1,6 @@
 import { Link } from 'gatsby-plugin-i18next';
 import React from 'react';
 import DirectorsListItem from './directorListItem';
-
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';

@@ -1,7 +1,5 @@
 import React from 'react';
 import { translate } from 'react-i18next';
-
-
 import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -11,7 +9,6 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import lightBlue from '@material-ui/core/colors/lightBlue';
 import Typography from '@material-ui/core/Typography';
-
 
 const StyledTableCell = withStyles(theme => ({
     head: {
@@ -32,25 +29,27 @@ const StyledTableRow = withStyles(theme => ({
     },
 }))(TableRow);
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
-        marginTop: theme.spacing(3),
         overflowX: 'auto',
     },
     table: {
         minWidth: 650,
     },
+    typography: {
+        margin: `${theme.spacing(7)}px auto`,
+        textAlign: 'center',
+        color: lightBlue[600],
+        fontWeight: 'bold'
+    }
 }));
-
 
 const WorksTable = ({ data, t }) => {
     const classes = useStyles();
     return (
-
         <React.Fragment>
-             <Typography variant="h6" color="textSecondary" component="p" id='works'>
+             <Typography className={classes.typography}  variant="h4" color="textSecondary" component="p" id='works'>
                 {t('Table')}
             </Typography>
             <Paper className={classes.root}>
@@ -74,7 +73,6 @@ const WorksTable = ({ data, t }) => {
                 </Table>
             </Paper>
         </React.Fragment>
-
     )
 }
 

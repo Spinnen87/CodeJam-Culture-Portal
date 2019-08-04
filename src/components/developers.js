@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -11,7 +10,6 @@ import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-
 
 const useStyles = makeStyles(theme => ({
     icon: {
@@ -34,14 +32,14 @@ const useStyles = makeStyles(theme => ({
         flexDirection: 'column',
     },
     cardMedia: {
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
     },
     cardContent: {
         flexGrow: 1,
     },
     media: {
         height: 0,
-        paddingTop: '56.25%', // 16:9
+        paddingTop: '56.25%',
     },
     button: {
         margin: theme.spacing(1),
@@ -56,7 +54,6 @@ const useStyles = makeStyles(theme => ({
         fontSize: 20,
     },
 }));
-
 
 const team = [
     {
@@ -103,35 +100,25 @@ const Developers = ({ developers, aboutDevelopers }) => {
                         <Grid item xs={12} sm={6} md={4} lg={3} key={i}>
                             <Card className={classes.card}>
                                 <CardHeader
-                                    avatar={
-                                        <Avatar aria-label="recipe" className={classes.avatar} >
-                                            {item.name[0]}
-                                        </Avatar>
-                                    }
+                                    avatar={<Avatar aria-label="recipe" className={classes.avatar}>{item.name[0]}</Avatar>}
                                     title={item.name}
                                     subheader={item.nickname}
                                 />
-                                <CardMedia
-                                    className={classes.media}
-                                    image={item.src}
-                                    title="Paella dish"
-                                />
+                                <CardMedia className={classes.media} image={item.src} title="Paella dish" />
                                 <CardContent>
                                     <Typography variant="body2" color="textSecondary" component="p">
                                         {item.description}
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color="primary" href={item.gitHub} >
-                                        GitHub
-                                     </Button>
+                                    <Button size="small" color="primary" href={item.gitHub}>GitHub</Button>
                                 </CardActions>
-                            </Card >
+                            </Card>
                         </Grid>
                     )}
                 </Grid>
             </Container>
-        </React.Fragment >
+        </React.Fragment>
     )
 };
 

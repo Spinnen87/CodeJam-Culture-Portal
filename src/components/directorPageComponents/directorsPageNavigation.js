@@ -1,14 +1,13 @@
 import React from 'react';
 
-const Navigation = (props) => {
-    const { timeLine, table, map, gallery } = props;
+const Navigation = () => {
     return (
-        <ul>
-            <li><a href="#timeline">{timeLine}</a></li>
-            <li><a href="#youtube">Youtube</a></li>
-            <li><a href="#works">{table}</a></li>
-            <li><a href="#gallery">{gallery}</a></li>
-            <li><a href="#map">{map}</a></li>
+        <ul className={'navigation'}>
+            <li><a className={'navItem'} href="#timeline"><i className="fas fa-list-ul"></i></a></li>
+            <li><a className={'navItem'} href="#youtube"><i className="fab fa-youtube"></i></a></li>
+            <li><a className={'navItem'} href="#works"><i className="fas fa-clipboard-list"></i></a></li>
+            <li><a className={'navItem'} href="#gallery"><i className="far fa-images"></i></a></li>
+            <li><a className={'navItem'} href="#map"><i className="fas fa-map-marker-alt"></i></a></li>
         </ul>
     )
 }

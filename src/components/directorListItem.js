@@ -13,26 +13,16 @@ const DirectorsListItem = ({ title, avatar, birthDate, deathDate, description })
                 <ListItemAvatar>
                     <Avatar alt="Remy Sharp" src={avatar} />
                 </ListItemAvatar>
-
                 <ListItemText
                     primary={title}
                     secondary={
                         <React.Fragment>
-                            <Typography
-                                component="p"
-                                variant="body2"
-                                color="textPrimary"
-                            >
-                                {`${birthDate}-${deathDate} `}
+                            <Typography component="p" variant="body2" color="textPrimary">
+                                {`${birthDate}-${deathDate}`}
                             </Typography>
-                            <Typography
-                                component="p"
-                                variant="body1"
-                                color="textPrimary"
-                            >
+                            <Typography component="p" variant="body1" color="textPrimary">
                                 {description}
                             </Typography>
-
                         </React.Fragment>
                     }
                 />

@@ -2,8 +2,6 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { withI18next } from 'gatsby-plugin-i18next';
 import { I18n } from 'react-i18next';
-
-
 import Layout from '../components/layout';
 
 const NotFoundPage = () => (
